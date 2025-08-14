@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Ucapan & Harapan{% endblock %}
+
+{% block content %}
+<section id="ucapan" class="py-20 mt-14 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-5xl font-extrabold text-center mb-12 text-gray-800">Last Date Kita</h2>
+        <p class="text-xl text-center mb-12 max-w-4xl mx-auto text-gray-700 leading-relaxed">
+            Momen terakhir kita ketemu — yang sampai sekarang masih tersimpan jelas di ingatan.
+            Aku ingin mengucapkan selamat ulang tahun, Ca.
+            Semoga di umurmu yang ke-23 ini, semua langkahmu dimudahkan,
+            segala urusan dilancarkan, dan mimpimu satu per satu terwujud.
+        </p>
+
+        <div class="flex justify-center">
+            <div class="w-full md:w-2/3 lg:w-1/2">
+                <video autoplay loop muted playsinline controls
+                    class="w-full h-auto rounded-xl shadow-xl mb-6 border-4 border-blue-200">
+                    <source src="{{ url_for('static', filename='video/LastDate.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="mt-4 max-w-4xl mx-auto text-gray-700 leading-relaxed">
+            <h3 class="text-3xl font-bold mb-4 text-gray-800">Ucapan</h3>
+            <p class="mb-8">
+                Terima kasih sudah menjadi bagian dari hidupku, mengajarkan aku arti sabar,
+                pengertian, dan cinta yang tulus. Aku sadar, mungkin aku pernah bikin kamu kecewa
+                atau sedih. Tapi percayalah, aku benar-benar menyayangimu. 
+                Aku selalu berharap kita bisa saling menyemangati lagi, seperti dulu.
+            </p>
+
+            <h3 class="text-3xl font-bold mb-4 text-gray-800">Harapan</h3>
+            <p>
+                Aku ingin kamu tahu, aku selalu mendoakan yang terbaik untukmu.
+                Semoga setiap langkahmu dikelilingi orang-orang yang mencintaimu tanpa syarat,
+                dan semoga kita bisa mengulang momen-momen bahagia seperti ini lagi.
+                Kalau aku harus memilih seribu kali, aku akan tetap memilih kamu.
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}
