@@ -1,9 +1,34 @@
-    {% extends "base.html" %}
-
-    {% block title %}Permintaan Maaf? Kayaknya Gak Cukup Buat Kamu, Ca{% endblock %}
-
-    {% block content %}
-    <section id="apology" class="py-20 mt-14 bg-white">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permintaan Maaf? Kayaknya Gak Cukup Buat Kamu, Ca</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles if needed, though Tailwind should handle most */
+        body {
+            font-family: 'Inter', sans-serif; /* A modern font */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-blue-700 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">Untuk Fasya</a>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="hover:text-blue-200">Home</a></li>
+                    <li><a href="about.html" class="hover:text-blue-200">About</a></li>
+                    <li><a href="apology.html" class="hover:text-blue-200">Apology</a></li>
+                    <li><a href="ucapan.html" class="hover:text-blue-200">Ucapan</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container mx-auto p-6">
+        <section id="apology" class="py-20 mt-14 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-5xl font-extrabold text-center mb-12 text-gray-800">
                 Permintaan Maaf? Kayaknya Gak Cukup Buat Kamu, Ca
@@ -31,17 +56,13 @@
             <h3 class="text-4xl font-bold text-center mb-10 text-gray-800">Kangen??</h3>
             <div class="flex justify-center">
                 <div class="w-full md:w-3/4 lg:w-2/3">
-                    {% if video_name %}
+                    
                     <video autoplay loop muted playsinline controls
                         class="w-full h-auto rounded-xl shadow-xl mb-6 border-4 border-blue-200">
-                        <source src="{{ url_for('static', filename='video/' + video_name) }}" type="video/mp4">
+                        <source src="static/video/Aquarium.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    {% else %}
-                    <img src="https://via.placeholder.com/800x500?text=Foto+Permintaan+Maaf"
-                        class="w-full h-auto rounded-xl shadow-xl mb-6 border-4 border-blue-200"
-                        alt="Momen Refleksi">
-                    {% endif %}
+                    
                     <p class="text-center text-gray-600 text-lg">
                         [Video kita ke aquarium. Inget nggak?? Hehe. Aku kangen banget date kayak gini sama kamu.
                         Bener-bener kangen banget.]
@@ -50,4 +71,6 @@
             </div>
         </div>
     </section>
-    {% endblock %}
+    </main>
+</body>
+</html>
